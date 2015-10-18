@@ -1,8 +1,19 @@
-logs
-target
-/.idea
-/.idea_modules
-/.classpath
-/.project
-/.settings
-/RUNNING_PID
+# sbt specific
+#
+target/
+
+# play specific
+#
+/logs/
+
+# IntelliJ IDEA
+#
+/.idea/
+
+# Unused (these were in the activator template)
+#
+#/.idea_modules
+#/.classpath
+#/.project
+#/.settings
+#/RUNNING_PID
