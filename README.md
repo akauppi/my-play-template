@@ -50,7 +50,7 @@ Select the folder
 
 ![image](.images/intellij_import.png)
 
-.. approve 'Import project from external source' > SBT
+.. approve 'Import project from external model' > SBT
 
 You might check 'Use auto-import'. It makes IntelliJ track changes to the `build.sbt` file more closely. (tbd. is this really so? AKa181015)
 
