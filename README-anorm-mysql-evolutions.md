@@ -1,12 +1,24 @@
-# Database access
+# README-anorm-mysql-evolutions
 
-## Prerequisities
+The [anorm](https://www.playframework.com/documentation/switch/2.4.x/ScalaAnorm) data access layer uses plain SQL to interact with a database.
 
-First you have to install MySQL database. Easiest way to do is to use `brew`.
+## Setting up MySQL
+
+Easiest way to do this is to use `brew` (on OS X).
 
 ```
 $ brew install mysql
 ```
+
+You may or may not want to launch MySQL automatically at computer restart. Check the console output of the installation for your options (or if you missed them, do `brew info mysql`).
+
+To launch MySQL manually:
+
+```
+$ mysql.server start
+```
+
+## Setting up a database
 
 Now you can connect to database using root user. By default there is no password.
 
@@ -29,10 +41,19 @@ Next you test the connection with password `password123`.
 $ mysql -u demouser -p demodb
 ```
 
+If you get to the `mysql>` prompt, all is fine.
+
 ## Database evolutions
 
-Database evolution is a way to handle database schema changes. Evolutions uses incremental changes and every change is
+Database evolution is a way to handle database schema changes. [Evolutions](https://www.playframework.com/documentation/2.4.x/Evolutions) uses incremental changes and every change is
 defined in different SQL script.
+
+<font color=red>@Mika: I'd leave the file creation instructions away, since the files are already there in this branch. Helps maintenance, too. However, this section has so much of wonderful text *explaining* the details, it should probably be there.
+
+Another approach is to let people read the official instructions. Just provide them a bare minimum (but working) template to get going.
+
+What do you think? AKa211015
+</font>
 
 Add following dependencies to `build.sbt` file. Note that in this phase you don't actually need anorm dependency, but we add it because you'll need it later.
 
@@ -199,4 +220,4 @@ This is a simple HTML template which displays the result.
 
 Now you can run your app and you should see the results coming from the database.
 
-![image](.images/db_ready.png)
+![image](.images/anorm-mysql/db_ready.png)

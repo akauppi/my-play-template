@@ -16,7 +16,7 @@ libraryDependencies ++= Seq(
   "mysql" % "mysql-connector-java" % "5.1.36"
 )
 
-libraryDependencies in Test ++= Seq(
+libraryDependencies ++= Seq(
   specs2 % Test
 )
 
