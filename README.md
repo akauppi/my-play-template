@@ -28,7 +28,7 @@ The project intends to be always kept up-to-date with latest stable releases (i.
 Unlike with Activator, because we are using Git we can offer a layered approach to templating.
 
 - `master` branch has the basic setup (e.g. Play, sbt, Scala versions)
-  - `anorm-mysql` branch adds the [anorm](https://www.playframework.com/documentation/2.1.1/ScalaAnorm) database library
+  - `anorm-mysql-evolutions` branch adds the [Anorm](https://www.playframework.com/documentation/2.4.x/ScalaAnorm) database library, using MySQL and [Evolutions](https://www.playframework.com/documentation/2.4.x/Evolutions)
   - ...
   
 The branches are supposed to be kept independent of each other, so that merging any branch with any other is possible. This way, one can e.g. set up a project that uses TypeScript for front end scripts and some database storage for the backend:
@@ -49,11 +49,11 @@ We use [IntelliJ IDEA 14 CE](https://www.jetbrains.com/idea/) for the developmen
 
 In the welcome wizard (close any open projects to see it), press Import Project:
 
-![image](.images/intellij_welcome.png)
+![image](.images/master/intellij_welcome.png)
 
 Select the folder 
 
-![image](.images/intellij_import.png)
+![image](.images/master/intellij_import.png)
 
 .. approve 'Import project from external model' > SBT
 
@@ -61,7 +61,7 @@ You might check 'Use auto-import'. It makes IntelliJ to resolve all the changes 
 
 After the import, you should see this:
 
-![image](.images/intellij_imported.png)
+![image](.images/master/intellij_imported.png)
 
 
 ## Running
