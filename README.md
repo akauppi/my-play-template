@@ -28,7 +28,7 @@ The project intends to be always kept up-to-date with latest stable releases (i.
 Unlike with Activator, because we are using Git we can offer a layered approach to templating.
 
 - `master` branch has the basic setup (e.g. Play, sbt, Scala versions)
-  - `anorm` branch adds the [anorm](https://github.com/playframework/anorm) database library
+  - `anorm-mysql` branch adds the [anorm](https://www.playframework.com/documentation/2.1.1/ScalaAnorm) database library
   - ...
   
 The branches are supposed to be kept independent of each other, so that merging any branch with any other is possible. This way, one can e.g. set up a project that uses TypeScript for front end scripts and some database storage for the backend:
@@ -38,6 +38,10 @@ $ git checkout ...URL here tbd...
 $ git merge typescript
 $ git merge anorm
 ```
+This means:
+
+- common changes must always be done in the master branch
+- **changes to non-master branches must NEVER be merged to master** (i.e. keep master generic)
 
 ## Opening in the IDE
 
