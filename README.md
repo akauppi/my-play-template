@@ -52,7 +52,7 @@ Select the folder
 
 .. approve 'Import project from external model' > SBT
 
-You might check 'Use auto-import'. It makes IntelliJ track changes to the `build.sbt` file more closely. (tbd. is this really so? AKa181015)
+You might check 'Use auto-import'. It makes IntelliJ to resolve all the changes made to the project automatically every time you refresh your project.
 
 After the import, you should see this:
 
