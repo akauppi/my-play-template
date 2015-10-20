@@ -10,7 +10,10 @@ libraryDependencies ++= Seq(
   jdbc,
   cache,
   ws,
-  specs2 % Test
+  specs2 % Test,
+  evolutions,
+  "com.typesafe.play" %% "anorm" % "2.4.0",
+  "mysql" % "mysql-connector-java" % "5.1.36"
 )
 
 // tbd. Who would need this?

@@ -1,7 +1,17 @@
-@(message: String)
+@(users: List[User], user: Option[User])
 
 @main("Welcome to Play") {
 
-    @play20.welcome(message)
+    <h2>User list</h2>
+    <ul>
+    @for(u <- users) {
+        <li>@u.email (@u.fullname)</li>
+    }
+    </ul>
+
+    <h2>Single user</h2>
+    @if(user.isDefined) {
+        <p>@user.get.email (@user.get.fullname)</p>
+    }
 
 }
