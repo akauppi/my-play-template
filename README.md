@@ -28,7 +28,8 @@ The project intends to be always kept up-to-date with latest stable releases (i.
 Unlike with Activator, because we are using Git we can offer a layered approach to templating.
 
 - `master` branch has the basic setup (e.g. Play, sbt, Scala versions)
-  - `xxx` branch has xxx specific stuff
+  - `anorm` branch adds the [anorm](https://github.com/playframework/anorm) database library
+  - ...
   
 The branches are supposed to be kept independent of each other, so that merging any branch with any other is possible. This way, one can e.g. set up a project that uses TypeScript for front end scripts and some database storage for the backend:
 
@@ -50,9 +51,9 @@ Select the folder
 
 ![image](.images/intellij_import.png)
 
-.. approve 'Import project from external source' > SBT
+.. approve 'Import project from external model' > SBT
 
-You might check 'Use auto-import'. It makes IntelliJ track changes to the `build.sbt` file more closely. (tbd. is this really so? AKa181015)
+You might check 'Use auto-import'. It makes IntelliJ to resolve all the changes made to the project automatically every time you refresh your project.
 
 After the import, you should see this:
 
