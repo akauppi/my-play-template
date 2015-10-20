@@ -12,7 +12,11 @@ CREATE TABLE users (
 );
 
 INSERT INTO users (email, password, fullname, isAdmin)
-VALUES ("demouser@demodemo.fi", "demopass", "Demo User", 0);
+VALUES ("demouser@demodemo.fi", "demopass", "Demo User #1", 0);
+
+INSERT INTO users (email, password, fullname, isAdmin)
+VALUES ("demouser2@demodemo.fi", "demopass2", "Demo User #2", 0);
+
 
 # --- !Downs
 

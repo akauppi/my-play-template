@@ -198,3 +198,5 @@ Finally, change `app/views/index.scala.html` file:
 This is a simple HTML template which displays the result.
 
 Now you can run your app and you should see the results coming from the database.
+
+![image](.images/db_ready.png)
