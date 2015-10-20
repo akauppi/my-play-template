@@ -13,7 +13,7 @@ libraryDependencies ++= Seq(
   specs2 % Test
 )
 
-// tbd. Who would need this?
+// This is needed for Specs2 in Play 2.4.x (but built-in tests seem fine without it?) AKa181015
 //
 //resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"
 
