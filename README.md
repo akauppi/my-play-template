@@ -28,7 +28,8 @@ The project intends to be always kept up-to-date with latest stable releases (i.
 Unlike with Activator, because we are using Git we can offer a layered approach to templating.
 
 - `master` branch has the basic setup (e.g. Play, sbt, Scala versions)
-  - `xxx` branch has xxx specific stuff
+  - `anorm` branch adds the [anorm](https://github.com/playframework/anorm) database library
+  - ...
   
 The branches are supposed to be kept independent of each other, so that merging any branch with any other is possible. This way, one can e.g. set up a project that uses TypeScript for front end scripts and some database storage for the backend:
 

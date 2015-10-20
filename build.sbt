@@ -7,13 +7,17 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala)
 scalaVersion := "2.11.7"
 
 libraryDependencies ++= Seq(
+  // anorm-mysql
   jdbc,
   cache,
   ws,
-  specs2 % Test,
   evolutions,
   "com.typesafe.play" %% "anorm" % "2.4.0",
   "mysql" % "mysql-connector-java" % "5.1.36"
+)
+
+libraryDependencies in Test ++= Seq(
+  specs2 % Test
 )
 
 // This is needed for Specs2 in Play 2.4.x (but built-in tests seem fine without it?) AKa181015
