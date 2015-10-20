@@ -34,7 +34,7 @@ $ mysql -u demouser -p demodb
 Database evolution is a way to handle database schema changes. Evolutions uses incremental changes and every change is
 defined in different SQL script.
 
-Add following dependencies to `build.sbt` file.
+Add following dependencies to `build.sbt` file. Note that in this phase you don't actually need anorm dependency, but we add it because you'll need it later.
 
 ```scala
 evolutions,
@@ -76,7 +76,7 @@ In the future, when your database evolves, you have to create a new file called 
 
 This will be the content of `1.sql` file:
 
-```
+```sql
 # Users schema
 
 # --- !Ups
@@ -118,7 +118,7 @@ Click `Apply this script now!` to run the evolution.
 
 ## Anorm
 
-Create a new directory called `app/models` and add there a new Scala class called `User`.
+Create a new directory called `app/models` and add a new Scala class called `User`.
 
 ```scala
 package models
@@ -151,7 +151,11 @@ object User {
 }
 ```
 
-Make sure the `index` method in `app/controllers/Application` class looks like this:
+`AnormParser` defines how SQL result is mapped to object. In this case we defined, that database field `id` is integer, `email` is string on so on. Finally we create a new object using these strong-typed values.
+
+The two methods are examples how you can fetch lists and single rows from database.
+
+Next make sure the `index` method in `app/controllers/Application` class looks like this:
 
 ```scala
 class Application extends Controller {
@@ -166,9 +170,11 @@ class Application extends Controller {
 }
 ```
 
+Here we fetch all users from the database and get a single user using ID 1. 
+
 Finally, change `app/views/index.scala.html` file:
 
-```
+```scala
 @(users: List[User], user: Option[User])
 
 @main("Welcome to Play") {
@@ -188,3 +194,7 @@ Finally, change `app/views/index.scala.html` file:
 }
 
 ```
+
+This is a simple HTML template which displays the result.
+
+Now you can run your app and you should see the results coming from the database.
