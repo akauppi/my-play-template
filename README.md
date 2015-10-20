@@ -72,4 +72,10 @@ See the Play instructions.
 
 If sending PR's, please pay attention that the changes are always targeting the right branch.
 
+## References
+
+- [Play 2.4 highlights](https://www.playframework.com/documentation/2.4.x/Highlights24)
+- [Play 2.4 migration guide](https://www.playframework.com/documentation/2.4.x/Migration24)
+- [Play 2.4 documentation](https://www.playframework.com/documentation/2.4.x/)
+
 <br />
